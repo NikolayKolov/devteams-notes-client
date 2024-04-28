@@ -1,7 +1,7 @@
 # Simple Notes app front end
 
 This repository contains the front end for a simple Notes application.
-Before using this repo, set up the backend first.
+Before using this repo, set up the backend first. The back end is found [here](https://github.com/NikolayKolov/devteams-notes-server).
 
 The front end is written in TypeScript and uses React 18, Material UI 5, React Router V6 for client side routing, [SWR](https://swr.vercel.app/) for data fetching and caching, [Zod](https://zod.dev/) for form data validation.
 
