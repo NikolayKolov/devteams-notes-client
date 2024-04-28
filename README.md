@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Simple Notes app front end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the front end for a simple Notes application.
+Before using this repo, set up the backend first.
 
-Currently, two official plugins are available:
+The front end is written in TypeScript and uses React 18, Material UI 5, React Router V6 for client side routing, [SWR](https://swr.vercel.app/) for data fetching and caching, [Zod](https://zod.dev/) for form data validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The user must be logged in to access the interface to create, edit and delete notes. Each user has access to only the notes he has created.
+The notes can be of 2 types - text or checklist.
 
-## Expanding the ESLint configuration
+Both the frontend and the backend run on the same server (localhost) and must be run on the same machine.
+The frontend uses a proxy setting in the vite.config.ts file to communicate with the backend on localhost.
+These settings must be changed for a production deployment.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The folder structure should be: a main folder 
 
-- Configure the top-level `parserOptions` property like this:
+## Project set-up
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Set up the back end first.
+2. Set up a folder shructure for the project, if you haven't already:
+  - Create a main folder, for example /Notes.
+  - Set up the backend in a folder /Notes/server, for example.
+  - Create a folder /Notes/client for the frontend.
+3. Copy or clone the repo in the frontend folder.
+3. Test if you have NodeJS installed.
+  - In Command Prompt, type 'node -v' and execute. If an error appears, go to [this site](https://nodejs.org/) and install latest stable version from there.
+4. Open the frontend folder with Visual Studio code, and open a terminal and execute command 'npm install'.
+5. Open the NPM Scripts menu on the bottom left part and run the script 'dev', or type 'npm run vite'.
