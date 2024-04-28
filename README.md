@@ -12,12 +12,13 @@ Both the frontend and the backend run on the same server (localhost) and must be
 The frontend uses a proxy setting in the vite.config.ts file to communicate with the backend on localhost.
 These settings must be changed for a production deployment.
 
-The folder structure should be: a main folder 
+The folder structure for the project should be: a main folder named /Notes, and in it 2 folders: /server and /client.
+Set up the back end and fron end in the /server and /client folders accordingly.
 
 ## Project set-up
 
 1. Set up the back end first.
-2. Set up a folder shructure for the project, if you haven't already:
+2. Set up a folder stucture for the project, if you haven't already:
   - Create a main folder, for example /Notes.
   - Set up the backend in a folder /Notes/server, for example.
   - Create a folder /Notes/client for the frontend.
